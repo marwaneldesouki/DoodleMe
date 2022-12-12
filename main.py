@@ -27,7 +27,7 @@ wait_players = False
 Lobby_countdown = 0
 Game_countdown =  0
 
-players_full = 4
+players_full = 2
 canvas =""
 #Create a client socket
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -70,8 +70,8 @@ def clear(canvas):
     canvas.delete('all')
 
 
-def send_message(event,color):
-    '''Send a message to the server to be broadcast'''
+def send_grid(event,color):
+    '''Send a grid to the server to be broadcast'''
     try:
         x1, y1 = event.x-1, event.y-1
         x2, y2 = (event.x+1), (event.y+1)
@@ -191,13 +191,13 @@ def lobbyScreen():
     positionDown = int(root.winfo_screenheight()/2 - windowHeight/2)
     root.geometry("+{}+{}".format(positionRight, positionDown))
     root.resizable(False, False) 
-    root.title("LobbyScreen")
+    root.title("DoodleMe{LobbyScreen}")
     root.config(background='white')
     waiting_lbl = tk.Label(root,text = f"Waiting Lobby",   bg='#c4c4c4',
                                             relief='flat',
                                             width=25,
                                             height=2,)
-    waiting_lbl.grid(row=0,column=4)
+    waiting_lbl.grid(row=1,column=4)
     # Create a canvas object and place it at the bottom of the window
     canvasx = tk.Canvas(root, borderwidth=0,width = 600,height = 450, highlightthickness=0, background='white')
     global wait_players,clients
@@ -336,11 +336,11 @@ class App(tk.Tk):
 
             
             if(screen==0):
-                self.title('Webpage Download')
+                self.title('DoodleMe')
                 self.geometry('680x430')
                 self.__main__()
             else:
-                self.title('Webpage Download')
+                self.title('DoodleMe{WinnerScreen}')
                 self.geometry('820x700')
                 self.winner_screen()
 
@@ -476,7 +476,7 @@ class App(tk.Tk):
 
             # root =tk.Tk()
             # Create the window
-            self.title("Whiteboard_Game")
+            self.title("DoodleMe{Whiteboard}")
             self.config(background='white')
             # Create and style buttons
             self.red_button = tk.Button(self,text='red',
@@ -511,7 +511,7 @@ class App(tk.Tk):
                                     fg='black',
                                     bg='#c4c4c4',
                                     relief='flat',
-                                    command=lambda:  send_message("",current_colour)
+                                    command=lambda:  send_grid("",current_colour)
                                     )
             self.erase_button = tk.Button(self,text='Erase',
                                     fg='black',
@@ -596,7 +596,7 @@ class App(tk.Tk):
                 sleep(1)
                 if(name==player_turn):
                     try:
-                        canvas.bind("<B1-Motion>", lambda event: start_new_thread(send_message,(event,current_colour,)))  # type: ignore
+                        canvas.bind("<B1-Motion>", lambda event: start_new_thread(send_grid,(event,current_colour,)))  # type: ignore
                     except:pass
                     
                 self.mainloop()

@@ -12,7 +12,7 @@ print(HOST_IP)
 HOST_PORT = 6969
 ENCODER = 'utf-8'
 BYTESIZE = 2048*50
-players_full = 4
+players_full = 2
 #Create a server socket
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server_socket.bind((HOST_IP, HOST_PORT))
@@ -74,7 +74,7 @@ def recieve_message(client_socket):
                 if(message['msg']=="start_Lobbycountdown"):
                     start_new_thread(broadcast_countdown,(5,"Lobbycountdown"))
                 elif(message['msg']=="start_Gamecountdown"):
-                    start_new_thread(broadcast_countdown,(40,"Gamecountdown"))
+                    start_new_thread(broadcast_countdown,(80,"Gamecountdown"))
                 elif(message['msg']=="clients_turn"):
                     start_new_thread(broadcast_ClientTurn,())
                 elif(message['msg']=="who_is_the_winner"):
@@ -86,7 +86,7 @@ def recieve_message(client_socket):
                 elif(message['msg']=="end_round"):
                     end_round = True
                 elif(message['msg']=='recv_image'):
-                    name = message['user']
+                    name = message['user']# type: ignore 
                     file = open(f'server_images/{name}.png',"wb")
                     try:
                         image_chunk = message['image']
