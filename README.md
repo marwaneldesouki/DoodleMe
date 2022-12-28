@@ -26,9 +26,9 @@ server.<br />
 simultaneously.<br />
 • Tkinter: used for GUI and graphics.<br />
 • PIL: used for image manipulation.<br />
-• thread
-• keras
-• tensorflow
+• thread.<br />
+• keras.<br />
+• tensorflow.<br />
 
 ## Requirements
 •	Python 3.10.6.<br />
