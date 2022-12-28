@@ -83,7 +83,8 @@ simultaneously.<br />
   once all players are done with their drawings
   the winner and losers screen appears which tells the players who won
   and who lost and how the AI saw their drawings.<br />
-  <img src="https://user-images.githubusercontent.com/37198610/209836141-c69950ad-867b-443d-a37a-f9d0a8120170.png" data-canonical-src="https://user-images.githubusercontent.com/37198610/209836141-c69950ad-867b-443d-a37a-f9d0a8120170.png" width="480" height="400"/>
+  <img src="https://user-images.githubusercontent.com/37198610/209872763-9ffb2459-6554-409f-8c7b-9caa62bb139e.jpg" data-canonical-src="https://user-images.githubusercontent.com/37198610/209872763-9ffb2459-6554-409f-8c7b-9caa62bb139e.jpg" width="480" height="400"/>
+
 
 
 ## Developer
