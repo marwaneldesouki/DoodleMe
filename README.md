@@ -76,7 +76,7 @@ simultaneously.<br />
    appears for each player where the player with the current turn has a
    canvas with all the options including the colours and erase/ delete
    buttons, However; other players’ buttons will be disabled until their
-   turns take place.
+   turns take place.<br />
    <img src="https://user-images.githubusercontent.com/37198610/209830682-5736a45d-0f11-4afc-872c-5e9587015615.png" data-canonical-src="https://user-images.githubusercontent.com/37198610/209830682-5736a45d-0f11-4afc-872c-5e9587015615.png" width="480" height="400"/> - <img src="https://user-images.githubusercontent.com/37198610/209830684-eaadc243-32f4-44ce-94a1-b69868bbe5e1.png" data-canonical-src="https://user-images.githubusercontent.com/37198610/209830684-eaadc243-32f4-44ce-94a1-b69868bbe5e1.png" width="480" height="400"/>
 
   •winners/ loser screen:<br />
