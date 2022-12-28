@@ -32,7 +32,8 @@ simultaneously.<br />
 
 ## Requirements
 •	Python 3.10.6.<br />
-• Install all libraries.
+• Install all libraries.<br />
+• you must install [GhostScript](https://ghostscript.com/releases/gsdnld.html)
 
 ## Project’s main functions:
  Client-side:<br />
